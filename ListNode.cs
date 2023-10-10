@@ -1,4 +1,12 @@
-﻿public class ListNode<T>
+﻿// First exercise 
+
+
+// Second exercise
+
+
+
+
+public class ListNode<T>
 {
 	public T Value;
 	public ListNode<T> next;

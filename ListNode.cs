@@ -1,10 +1,13 @@
-﻿public class ListNode<T>
+﻿namespace Recursion
 {
-	public T Value;
-	public ListNode<T> next;
-	public ListNode(T value, ListNode<T> next = null)
+	public class ListNode<T>
 	{
-		Value = value;
-		this.next = next;
+		public T Value;
+		public ListNode<T>? next;
+		public ListNode(T value, ListNode<T>? next = null)
+		{
+			Value = value;
+			this.next = next;
+		}
 	}
 }

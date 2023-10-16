@@ -1,4 +1,7 @@
 ﻿// First exercise 
+
+using Recursion;
+
 string Reverse(string str)
 {
 	if (str.Length == 1)
@@ -10,15 +13,15 @@ string Reverse(string str)
 Console.WriteLine($"First: \n{Reverse("Tiger")}\n");
 
 // Second exercise
-ListNode<int> SwapPairs(ListNode<int> head)
+ListNode<int>? SwapPairs(ListNode<int>? head)
 {
     if (head == null || head.next == null)
         return head;
 
     ListNode<int> firstNode = head;
-    ListNode<int> secondNode = head.next;
+    ListNode<int>? secondNode = head.next;
 
-    ListNode<int> newHead = SwapPairs(secondNode.next);
+    ListNode<int>? newHead = SwapPairs(secondNode.next);
 
     secondNode.next = firstNode;
     firstNode.next = newHead;
@@ -27,12 +30,12 @@ ListNode<int> SwapPairs(ListNode<int> head)
 }
 
 Console.WriteLine("Second: ");
-ListNode<int> list = new(1);
-var a1 = list.next = new(2);
-var a2 = a1.next = new(3);
-var a3 = a2.next = new(4);
+ListNode<int>? list = new(1);
+ListNode<int> a1 = list.next = new(2);
+ListNode<int> a2 = a1.next = new(3);
+a2.next = new(4);
 
-var a = list;
+ListNode<int>? a = list;
 
 Console.Write("In: ");
 while (a != null)
